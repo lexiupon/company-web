@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <style>
+      .hex {
+        fill: none;
+        stroke: #111;
+        stroke-width: 16;
+        stroke-linejoin: round;
+      }
+      .dot {
+        fill: #111;
+      }
+      @media (prefers-color-scheme: dark) {
+        .hex { stroke: #fff; }
+        .dot { fill: #fff; }
+      }
+    </style>
+  </defs>
+
+  <!-- Flat-top hexagon centered at (120,120) -->
+  <polygon
+    class="hex"
+    points="208,120 164,196.21 76,196.21 32,120 76,43.79 164,43.79"
+  />
+
+  <!-- Center dot proportional to stroke width -->
+  <circle class="dot" cx="120" cy="120" r="22" />
+</svg>

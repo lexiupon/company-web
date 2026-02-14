@@ -1,0 +1,45 @@
+---
+interface Props {
+  size?: number;
+  class?: string;
+}
+
+const { size = 140, class: className } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 240 240"
+  class:list={['logo', className]}
+  aria-label="Lexiupon logo"
+>
+  <polygon
+    class="hex"
+    points="208,120 164,196.21 76,196.21 32,120 76,43.79 164,43.79"
+  />
+  <circle class="dot" cx="120" cy="120" r="22" />
+</svg>
+
+<style>
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
+  .hex {
+    fill: none;
+    stroke: #1a1a2e;
+    stroke-width: 16;
+    stroke-linejoin: round;
+  }
+  .dot {
+    fill: #1a1a2e;
+    transform-origin: 120px 120px;
+    animation: breathe 3s ease-in-out infinite;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(0.85); }
+    50% { transform: scale(1.15); }
+  }
+</style>
